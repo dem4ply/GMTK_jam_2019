@@ -4,11 +4,15 @@ using chibi.motor;
 using UnityEngine;
 using System.Collections;
 using System;
+using platformer.animator;
 
 namespace platformer.motor.npc
 {
 	public class Platformer_motor: chibi.motor.Motor
 	{
+		[Header( "animator" )]
+		public Platformer_animator_npc animator;
+
 		[Header( "jump" )]
 		public float max_jump_heigh = 4f;
 		public float min_jump_heigh = 1f;
@@ -134,15 +138,15 @@ namespace platformer.motor.npc
 		protected virtual void _proccess_ground_horizontal_velocity(
 			ref Vector3 velocity_vector )
 		{
-			float desire_horizontal_velocity = desire_direction.x * max_speed;
-			float current_horizontal_velocity = velocity_vector.x;
+			float desire_horizontal_velocity = desire_direction.z * max_speed;
+			float current_horizontal_velocity = velocity_vector.z;
 
 			// suavizado de la velocidad horizontal
 			float final_horizontal_velocity = Mathf.SmoothDamp(
 				current_horizontal_velocity, desire_horizontal_velocity,
 				ref horizontal_velocity_smooth, acceleration_time_in_ground );
 
-			velocity_vector.x = final_horizontal_velocity;
+			velocity_vector.z = final_horizontal_velocity;
 		}
 
 		protected virtual void _proccess_air_horizontal_velocity(
@@ -155,24 +159,30 @@ namespace platformer.motor.npc
 			if ( i_desire_direction == 0 )
 				return;
 			velocity_vector = new Vector3(
-				current_speed.x, ridgetbody.velocity.y,
+				current_speed.x, velocity_vector.y,
 				current_speed.z );
 			if ( is_walled )
+			{
 				if ( i_desire_direction == wall_direction )
 				{
 					velocity_vector.z = 0;
 				}
+			}
+			else
+			{
 
-			float desire_horizontal_velocity = desire_direction.z * max_speed;
+				float desire_horizontal_velocity = desire_direction.z * max_speed;
 
-			float current_horizontal_velocity = velocity_vector.z;
+				float current_horizontal_velocity = velocity_vector.z;
 
-			// suavizado de la velocidad horizontal
-			float final_horizontal_velocity = Mathf.SmoothDamp(
-				current_horizontal_velocity, desire_horizontal_velocity,
-				ref horizontal_velocity_smooth, acceleration_time_in_air );
+				// suavizado de la velocidad horizontal
+				float final_horizontal_velocity = Mathf.SmoothDamp(
+					current_horizontal_velocity, desire_horizontal_velocity,
+					ref horizontal_velocity_smooth, acceleration_time_in_air );
 
-			velocity_vector.z = final_horizontal_velocity;
+				velocity_vector.z = final_horizontal_velocity;
+			}
+			current_speed = velocity_vector;
 		}
 
 		protected virtual void _process_jump( ref Vector3 speed_vector )
@@ -232,6 +242,14 @@ namespace platformer.motor.npc
 			max_jump_velocity = Math.Abs( gravity ) * jump_time;
 			min_jump_velocity = ( float )Math.Sqrt(
 				2.0 * Math.Abs( gravity ) * min_jump_heigh );
+		}
+
+		protected override void _init_cache()
+		{
+			base._init_cache();
+			animator = GetComponent<Platformer_animator_npc>();
+			if ( !animator )
+				debug.error( "no se encontro platformer animator npc" );
 		}
 	}
 }

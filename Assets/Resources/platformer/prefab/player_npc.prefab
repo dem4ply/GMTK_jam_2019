@@ -57,10 +57,10 @@ GameObject:
   - component: {fileID: 8727155231739143336}
   - component: {fileID: 8068627013742195770}
   - component: {fileID: 5579020319343075064}
-  - component: {fileID: 1507183596723189689}
   - component: {fileID: 1677939508168550555}
   - component: {fileID: 1677939508168550552}
   - component: {fileID: 8312545975735701927}
+  - component: {fileID: 4887072265132614732}
   m_Layer: 0
   m_Name: player_npc
   m_TagString: Untagged
@@ -156,21 +156,6 @@ MonoBehaviour:
     _current: 0
     _max: 0
     variable: {fileID: 0}
---- !u!114 &1507183596723189689
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7133084019717886803}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bcf8b4c0c6b758fd39eae3ebae4e9a95, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  debug_mode: 0
-  pool: {fileID: 0}
-  animator: {fileID: 0}
 --- !u!114 &1677939508168550555
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -243,6 +228,21 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.21, y: 1.6, z: 0.21}
   m_Center: {x: 0, y: 0.75, z: 0}
+--- !u!114 &4887072265132614732
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7133084019717886803}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64c4b3358a8f5ea45b04dc257b5ad20d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  debug_mode: 0
+  pool: {fileID: 0}
+  animator: {fileID: 5188992872131620414}
 --- !u!1 &7133084020789422458
 GameObject:
   m_ObjectHideFlags: 0
@@ -346,6 +346,12 @@ PrefabInstance:
 --- !u!4 &7615651890976607985 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1124805260675427304, guid: 61d61c7f4300b4c72881c7fd3a8f1065,
+    type: 3}
+  m_PrefabInstance: {fileID: 7362302815432992025}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &5188992872131620414 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 3327921397993147175, guid: 61d61c7f4300b4c72881c7fd3a8f1065,
     type: 3}
   m_PrefabInstance: {fileID: 7362302815432992025}
   m_PrefabAsset: {fileID: 0}
