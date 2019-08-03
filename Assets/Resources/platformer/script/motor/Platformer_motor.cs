@@ -139,6 +139,7 @@ namespace platformer.motor.npc
 			_proccess_gravity( ref velocity_vector );
 			_process_jump( ref velocity_vector );
 
+			animator.direction = velocity_vector;
 			ridgetbody.velocity = velocity_vector;
 		}
 

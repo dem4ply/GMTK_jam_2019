@@ -1,5 +1,6 @@
 using UnityEngine;
 using chibi.animator;
+using System;
 
 namespace platformer.animator
 {
@@ -11,7 +12,7 @@ namespace platformer.animator
 				return animator.GetFloat( "Speed" );
 			}
 			set {
-				animator.SetFloat( "Speed", value );
+				animator.SetFloat( "Speed", Math.Abs( value ) );
 			}
 		}
 
@@ -49,13 +50,12 @@ namespace platformer.animator
 		{
 			get {
 				var x = animator.GetFloat( "horizontal" );
-				var z = animator.GetFloat( "vertical" );
-				return new Vector3( x, 0, z );
+				//var z = animator.GetFloat( "vertical" );
+				return new Vector3( 0, 0, x );
 			}
 			set {
-				var dir = new Vector3( value.x, value.z, 0 );
-				animator.SetFloat( "horizontal", dir.x );
-				animator.SetFloat( "vertical", dir.y );
+				animator.SetFloat( "horizontal", Math.Sign( value.z ) );
+				//animator.SetFloat( "vertical", dir.y );
 			}
 		}
 	}
