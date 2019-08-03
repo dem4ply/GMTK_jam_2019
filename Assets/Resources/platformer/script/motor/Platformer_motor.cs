@@ -143,7 +143,6 @@ namespace platformer.motor.npc
 				ref horizontal_velocity_smooth, acceleration_time_in_ground );
 
 			velocity_vector.x = final_horizontal_velocity;
-			debug.log( "ground velocity" );
 		}
 
 		protected virtual void _proccess_air_horizontal_velocity(
@@ -174,7 +173,6 @@ namespace platformer.motor.npc
 				ref horizontal_velocity_smooth, acceleration_time_in_air );
 
 			velocity_vector.z = final_horizontal_velocity;
-			debug.log( "air velocity" );
 		}
 
 		protected virtual void _process_jump( ref Vector3 speed_vector )
@@ -188,25 +186,21 @@ namespace platformer.motor.npc
 					{
 						speed_vector.z = -jump_direction * wall_jump_climp.z;
 						speed_vector.y = wall_jump_climp.y;
-						debug.log( "climp" );
 					}
 					else if ( desire_direction.z == 0 )
 					{
 						speed_vector.z = -jump_direction * wall_jump_off.z;
 						speed_vector.y = wall_jump_off.y;
-						debug.log( "off" );
 					}
 					else
 					{
 						speed_vector.z = -jump_direction * wall_jump_leap.z;
 						speed_vector.y = wall_jump_leap.y;
-						debug.log( "leap" );
 					}
 				}
 				else if ( is_grounded )
 				{
 					speed_vector.y = max_jump_velocity;
-					debug.log( "ground" );
 				}
 			}
 			else if ( speed_vector.y > min_jump_velocity )

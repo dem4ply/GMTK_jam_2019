@@ -164,15 +164,17 @@ namespace platformer.controller.npc
 					manager_collisions.add(
 						new manager.Collision_info( STR_WALL, collision ) );
 
-					if ( contact.normal.x > 0 )
+					if ( contact.normal.z > 0 )
 					{
 						manager_collisions.add(
 							new manager.Collision_info( STR_WALL_left, collision ) );
+						debug.log( "left" );
 					}
-					else if ( contact.normal.x < 0 )
+					else if ( contact.normal.z < 0 )
 					{
 						manager_collisions.add(
 							new manager.Collision_info( STR_WALL_right, collision ) );
+						debug.log( "righ" );
 					}
 				}
 			}
