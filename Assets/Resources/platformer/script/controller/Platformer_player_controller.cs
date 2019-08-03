@@ -43,9 +43,19 @@ namespace platformer.controller.player
 
 		public override void action( string name, string e )
 		{
+			base.action( name, e );
 			switch ( name )
 			{
 				case "fire1":
+					switch ( e )
+					{
+						case chibi.joystick.events.down:
+							break;
+						case chibi.joystick.events.up:
+							break;
+					}
+					break;
+				case "jump":
 					switch ( e )
 					{
 						case chibi.joystick.events.down:

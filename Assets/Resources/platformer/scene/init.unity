@@ -94,8 +94,8 @@ LightmapSettings:
     m_PVRFilteringAtrousPositionSigmaDirect: 0.5
     m_PVRFilteringAtrousPositionSigmaIndirect: 2
     m_PVRFilteringAtrousPositionSigmaAO: 1
-    m_ShowResolutionOverlay: 1
     m_ExportTrainingData: 0
+    m_TrainingDataDestination: TrainingData
   m_LightingDataAsset: {fileID: 0}
   m_UseShadowmask: 1
 --- !u!196 &4
@@ -555,6 +555,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2833578346261876487, guid: f531b8d744c8ded438d9bc02e52a141d,
         type: 3}
+      propertyPath: actions.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2833578346261876487, guid: f531b8d744c8ded438d9bc02e52a141d,
+        type: 3}
       propertyPath: controller
       value: 
       objectReference: {fileID: 1225054512}
@@ -564,6 +569,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 85886467fee2b2f93b3c5f6f73717200,
         type: 2}
+    - target: {fileID: 2833578346261876487, guid: f531b8d744c8ded438d9bc02e52a141d,
+        type: 3}
+      propertyPath: actions.Array.data[0]
+      value: jump
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f531b8d744c8ded438d9bc02e52a141d, type: 3}
 --- !u!1 &1873903728
@@ -606,11 +616,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 8780861109776712816, guid: 4aea4cb09a657194c8da7917dcfec0f3,
-        type: 3}
-      propertyPath: m_Name
-      value: wall
-      objectReference: {fileID: 0}
     - target: {fileID: 8780861109776712828, guid: 4aea4cb09a657194c8da7917dcfec0f3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -665,6 +670,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8780861109776712816, guid: 4aea4cb09a657194c8da7917dcfec0f3,
+        type: 3}
+      propertyPath: m_Name
+      value: wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4aea4cb09a657194c8da7917dcfec0f3, type: 3}
