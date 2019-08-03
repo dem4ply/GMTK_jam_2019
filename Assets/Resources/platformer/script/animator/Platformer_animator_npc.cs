@@ -8,10 +8,40 @@ namespace platformer.animator
 		public float speed
 		{
 			get{
-				return animator.GetFloat( "speed" );
+				return animator.GetFloat( "Speed" );
 			}
 			set {
-				animator.SetFloat( "speed", value );
+				animator.SetFloat( "Speed", value );
+			}
+		}
+
+		public float speed_up
+		{
+			get{
+				return animator.GetFloat( "SpeedUp" );
+			}
+			set {
+				animator.SetFloat( "SpeedUp", value );
+			}
+		}
+
+		public bool is_walled
+		{
+			get{
+				return animator.GetBool( "IsWalled" );
+			}
+			set {
+				animator.SetBool( "IsWalled", value );
+			}
+		}
+
+		public bool is_grounded
+		{
+			get{
+				return animator.GetBool( "IsGrounded" );
+			}
+			set {
+				animator.SetBool( "IsGrounded", value );
 			}
 		}
 

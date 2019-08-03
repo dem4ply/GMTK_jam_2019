@@ -125,14 +125,27 @@ namespace platformer.motor.npc
 				velocity_vector = ridgetbody.velocity;
 
 			if ( is_grounded )
+			{
 				_proccess_ground_horizontal_velocity( ref velocity_vector );
+				animator.speed = velocity_vector.z;
+				animator.speed_up = 0f;
+			}
 			else
+			{
 				_proccess_air_horizontal_velocity( ref velocity_vector );
+				animator.speed = 0f;
+				animator.speed_up = velocity_vector.y;
+			}
 			_proccess_gravity( ref velocity_vector );
 			_process_jump( ref velocity_vector );
 
 			ridgetbody.velocity = velocity_vector;
+		}
 
+		private void Update()
+		{
+			animator.is_walled = is_walled;
+			animator.is_grounded = is_grounded;
 		}
 
 		protected virtual void _proccess_ground_horizontal_velocity(
