@@ -1694,7 +1694,7 @@ MonoBehaviour:
   joystick: {fileID: 1300622566}
   time_to_close_curtains: 2
   time_to_open_curtains: 2
-  time_to_restore_scenary: 2
+  time_to_restore_scenary: 1
   b: []
   c: []
 --- !u!1 &1481988939
