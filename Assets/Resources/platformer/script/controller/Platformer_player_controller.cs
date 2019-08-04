@@ -1,11 +1,11 @@
 using UnityEngine;
-using chibi.controller.npc;
+using platformer.controller.npc;
 
 namespace platformer.controller.player
 {
 	public class Platformer_player_controller : chibi.controller.Controller
 	{
-		public  Controller_npc player;
+		public Plataformer_npc player;
 
 		public override Vector3 desire_direction
 		{
@@ -43,7 +43,6 @@ namespace platformer.controller.player
 
 		public override void action( string name, string e )
 		{
-			base.action( name, e );
 			switch ( name )
 			{
 				case "fire1":
@@ -59,8 +58,10 @@ namespace platformer.controller.player
 					switch ( e )
 					{
 						case chibi.joystick.events.down:
+							player.jump();
 							break;
 						case chibi.joystick.events.up:
+							player.stop_jump();
 							break;
 					}
 					break;
