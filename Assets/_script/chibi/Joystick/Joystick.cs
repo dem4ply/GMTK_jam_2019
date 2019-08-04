@@ -72,6 +72,15 @@ namespace chibi.joystick
 		{
 			return Input.GetButtonUp( action );
 		}
+
+		public override void reset()
+		{
+			controller.desire_direction = Vector3.zero;
+			controller.speed = 0f;
+
+			foreach ( string action in actions )
+				controller.action( action, "up" );
+		}
 		#endregion
 	}
 }

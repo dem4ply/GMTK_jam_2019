@@ -15,8 +15,7 @@ namespace platformer.controller.player
 			}
 			set
 			{
-				if ( enabled )
-					player.desire_direction = value;
+				player.desire_direction = value;
 			}
 		}
 
@@ -28,8 +27,6 @@ namespace platformer.controller.player
 			}
 			set
 			{
-				if ( !enabled )
-					return;
 				if ( value >= 1f )
 					player.speed = player.max_speed;
 				else
@@ -46,8 +43,6 @@ namespace platformer.controller.player
 
 		public override void action( string name, string e )
 		{
-			if ( !enabled )
-				return;
 			switch ( name )
 			{
 				case "fire1":

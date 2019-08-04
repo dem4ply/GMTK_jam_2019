@@ -6,6 +6,7 @@ namespace platformer.animator
 {
 	public class Scenary_behaviour : chibi.Chibi_behaviour
 	{
+		public bool respawn_control = true;
 		public int current_phase = 0;
 		public Transform phase_1;
 		public Transform phase_2;

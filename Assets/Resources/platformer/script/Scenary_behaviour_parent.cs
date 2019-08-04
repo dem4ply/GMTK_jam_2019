@@ -7,6 +7,7 @@ namespace platformer.animator
 {
 	public class Scenary_behaviour_parent : chibi.Chibi_behaviour
 	{
+		public bool respawn_control = true;
 		public int current_phase = 0;
 		public List<Scenary_behaviour> b;
 

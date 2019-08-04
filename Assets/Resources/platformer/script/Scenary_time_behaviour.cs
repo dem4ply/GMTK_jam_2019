@@ -30,10 +30,15 @@ namespace platformer.animator
 		protected IEnumerator timer()
 		{
 			yield return new WaitForSeconds( time );
+			move( desire_phase );
+		}
+
+		public void move( int i )
+		{
 			foreach ( var a in b )
-				a.phase( desire_phase );
+				a.phase( i );
 			foreach ( var a in c )
-				a.phase( desire_phase );
+				a.phase( i );
 		}
 
 		protected override void _init_cache()
