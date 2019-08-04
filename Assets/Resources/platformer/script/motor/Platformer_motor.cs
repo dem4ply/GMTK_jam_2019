@@ -140,6 +140,11 @@ namespace platformer.motor.npc
 			_process_jump( ref velocity_vector );
 
 			animator.direction = velocity_vector;
+			if ( is_walled )
+				if ( is_walled_left )
+					animator.direction = Vector3.back;
+				else
+					animator.direction = Vector3.forward;
 			ridgetbody.velocity = velocity_vector;
 		}
 
@@ -201,7 +206,6 @@ namespace platformer.motor.npc
 
 		protected virtual void _process_jump( ref Vector3 speed_vector )
 		{
-			Debug.Log( try_to_jump_the_next_update );
 			if ( try_to_jump_the_next_update )
 			{
 				if ( is_walled && is_not_grounded )
