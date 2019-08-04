@@ -43,6 +43,7 @@ namespace platformer.controller.player
 
 		public override void action( string name, string e )
 		{
+			base.action( name, e );
 			switch ( name )
 			{
 				case "fire1":

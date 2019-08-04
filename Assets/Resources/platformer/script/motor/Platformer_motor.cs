@@ -201,6 +201,7 @@ namespace platformer.motor.npc
 
 		protected virtual void _process_jump( ref Vector3 speed_vector )
 		{
+			Debug.Log( try_to_jump_the_next_update );
 			if ( try_to_jump_the_next_update )
 			{
 				if ( is_walled && is_not_grounded )
