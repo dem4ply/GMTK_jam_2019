@@ -73,6 +73,15 @@ namespace chibi.joystick
 			return Input.GetButtonUp( action );
 		}
 
+		public void finish_with_jump()
+		{
+			controller.action( "jump", "up" );
+			controller.desire_direction = Vector3.zero;
+			controller.speed = 0f;
+			controller.action( "victory", "down" );
+			enabled = false;
+		}
+
 		public override void reset()
 		{
 			controller.desire_direction = Vector3.zero;

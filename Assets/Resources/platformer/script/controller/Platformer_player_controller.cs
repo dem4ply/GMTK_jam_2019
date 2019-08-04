@@ -66,6 +66,14 @@ namespace platformer.controller.player
 							break;
 					}
 					break;
+				case "victory":
+					switch ( e )
+					{
+						case chibi.joystick.events.down:
+							player.victory();
+							break;
+					}
+					break;
 			}
 		}
 	}

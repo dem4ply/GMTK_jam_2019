@@ -102,6 +102,12 @@ namespace platformer.controller.npc
 			hp = GetComponent<chibi.damage.motor.HP_engine>();
 		}
 
+		public virtual void victory()
+		{
+			var motor_npc = motor as Platformer_motor;
+			motor_npc.animator.victory = true;
+		}
+
 		#region manejo de salto
 		public virtual void jump()
 		{

@@ -46,6 +46,16 @@ namespace platformer.animator
 			}
 		}
 
+		public bool victory
+		{
+			get{
+				return animator.GetBool( "IsWin" );
+			}
+			set {
+				animator.SetBool( "IsWin", value );
+			}
+		}
+
 		public Vector3 direction
 		{
 			get {

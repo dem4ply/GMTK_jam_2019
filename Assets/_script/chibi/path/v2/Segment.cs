@@ -147,17 +147,6 @@ namespace chibi.path
 
 		public void draw_gizmo()
 		{
-			UnityEditor.Handles.color = Color.black;
-			UnityEditor.Handles.DrawLine( vc1, vp1 );
-			UnityEditor.Handles.DrawLine( vc2, vp2 );
-			UnityEditor.Handles.DrawBezier( vp1, vp2, vc1, vc2, Color.green, null, 2 );
-
-			Gizmos.color = Color.red;
-			Gizmos.DrawSphere( vp1, 0.1f );
-			Gizmos.DrawSphere( vp2, 0.1f );
-			Gizmos.color = Color.yellow;
-			Gizmos.DrawSphere( vc1, 0.1f );
-			Gizmos.DrawSphere( vc2, 0.1f );
 		}
 	}
 }
