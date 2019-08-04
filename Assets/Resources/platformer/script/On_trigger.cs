@@ -9,7 +9,6 @@ namespace platformer.animator
 	{
 		public UnityEvent on_trigger_enter;
 		public UnityEvent on_trigger_exit;
-		int sadf;
 
 		private void OnTriggerEnter( Collider other )
 		{

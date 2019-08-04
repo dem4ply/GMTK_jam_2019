@@ -18,6 +18,8 @@ namespace chibi.controller.steering.behavior
 			Steering controller, Transform target,
 			Steering_properties properties )
 		{
+			if ( !target )
+				return Vector3.zero;
 			controller.controller.speed = controller.controller.max_speed;
 			var direction = seek( controller, target.position );
 			direction.Normalize();
@@ -25,7 +27,6 @@ namespace chibi.controller.steering.behavior
 			if ( distance_to_target < dist_unacelarate )
 			{
 				float q = remap( distance_to_target, 0, dist_unacelarate, 0, controller.controller.max_speed );
-				Debug.Log( q );
 				controller.controller.speed = q;
 			}
 			if ( distance_to_target <= stop_distance )
