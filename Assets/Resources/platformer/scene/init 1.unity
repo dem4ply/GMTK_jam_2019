@@ -632,10 +632,38 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 784615366, guid: 9815aad108ced73459a6a9100007d26a, type: 3}
       propertyPath: max_speed
-      value: 15
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1698395044, guid: 9815aad108ced73459a6a9100007d26a, type: 3}
+      propertyPath: on_trigger_enter.m_PersistentCalls.m_Calls.Array.size
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1698395044, guid: 9815aad108ced73459a6a9100007d26a, type: 3}
       propertyPath: on_trigger_enter.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_IntArgument
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1698395044, guid: 9815aad108ced73459a6a9100007d26a, type: 3}
+      propertyPath: on_trigger_enter.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1698395044, guid: 9815aad108ced73459a6a9100007d26a, type: 3}
+      propertyPath: on_trigger_enter.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1698395044, guid: 9815aad108ced73459a6a9100007d26a, type: 3}
+      propertyPath: on_trigger_enter.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 617723755}
+    - target: {fileID: 1698395044, guid: 9815aad108ced73459a6a9100007d26a, type: 3}
+      propertyPath: on_trigger_enter.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: phase
+      objectReference: {fileID: 0}
+    - target: {fileID: 1698395044, guid: 9815aad108ced73459a6a9100007d26a, type: 3}
+      propertyPath: on_trigger_enter.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 1698395044, guid: 9815aad108ced73459a6a9100007d26a, type: 3}
+      propertyPath: on_trigger_enter.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_IntArgument
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
