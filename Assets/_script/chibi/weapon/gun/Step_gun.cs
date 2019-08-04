@@ -1,5 +1,4 @@
 ﻿using chibi.controller.weapon.gun.bullet;
-using chibi.motor.weapons.gun.bullet;
 
 namespace chibi.weapon.gun
 {

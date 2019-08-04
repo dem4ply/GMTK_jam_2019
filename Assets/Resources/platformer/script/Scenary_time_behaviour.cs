@@ -1,8 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using chibi.animator;
-using System;
 
 namespace platformer.animator
 {

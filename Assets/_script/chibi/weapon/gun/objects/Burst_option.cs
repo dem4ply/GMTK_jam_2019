@@ -1,8 +1,4 @@
-using System.Collections;
-using UnityEngine;
 using System;
-using weapon.stat;
-using weapon.ammo;
 
 using chibi.controller.weapon.gun.bullet;
 

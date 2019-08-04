@@ -1,6 +1,5 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
-using chibi.motor;
 using platformer.motor.npc;
 
 namespace platformer.controller.npc

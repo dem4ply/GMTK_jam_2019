@@ -1,6 +1,3 @@
-using UnityEngine;
-using System.Collections.Generic;
-
 namespace chibi.game_manager
 {
 	public class Start_manager_when_other_end : Manager

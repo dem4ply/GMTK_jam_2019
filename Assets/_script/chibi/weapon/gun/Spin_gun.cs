@@ -1,8 +1,4 @@
-﻿using UnityEngine;
-using chibi.controller.weapon.gun.bullet;
-using chibi.motor.weapons.gun.bullet;
-
-namespace chibi.weapon.gun
+﻿namespace chibi.weapon.gun
 {
 	public class Spin_gun : Step_gun
 	{

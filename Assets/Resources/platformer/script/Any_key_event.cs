@@ -1,6 +1,4 @@
 using UnityEngine;
-using chibi.animator;
-using System;
 using UnityEngine.Events;
 
 namespace platformer.animator

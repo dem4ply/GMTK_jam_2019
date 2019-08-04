@@ -1,6 +1,4 @@
-﻿using chibi.controller.weapon.gun.bullet;
-using chibi.motor.weapons.gun.bullet;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace chibi.weapon.gun
 {

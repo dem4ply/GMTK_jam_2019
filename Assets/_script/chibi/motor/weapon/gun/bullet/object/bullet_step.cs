@@ -1,8 +1,5 @@
 using UnityEngine;
-using weapon.ammo;
-using chibi.pomodoro;
 using System;
-using chibi.motor.weapons.gun.bullet;
 
 namespace chibi.motor.weapons.gun.bullet
 {

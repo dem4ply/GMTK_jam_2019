@@ -1,8 +1,4 @@
 ﻿using UnityEngine;
-using System.Collections.Generic;
-using chibi.motor;
-using UnityEngine;
-using System.Collections;
 using System;
 using platformer.animator;
 
