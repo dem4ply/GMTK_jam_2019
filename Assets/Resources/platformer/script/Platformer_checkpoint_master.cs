@@ -37,6 +37,7 @@ namespace platformer.animator
 		{
 			curtains.move( 0 );
 			joystick.enabled = false;
+			debug.log( "spawn" );
 			joystick.reset();
 			yield return new WaitForSeconds( time_to_close_curtains );
 			player.position = current_checkpoint.respawn_point.position;

@@ -61,7 +61,7 @@ GameObject:
   - component: {fileID: 1677939508168550552}
   - component: {fileID: 8312545975735701927}
   - component: {fileID: 4887072265132614732}
-  m_Layer: 0
+  m_Layer: 17
   m_Name: player_npc
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -203,6 +203,7 @@ MonoBehaviour:
   is_steering: 0
   steering_mass: 1
   velocity_acceleration: {x: 0, y: 0, z: 0}
+  animator: {fileID: 0}
   max_jump_heigh: 4
   min_jump_heigh: 1
   jump_time: 0.4
