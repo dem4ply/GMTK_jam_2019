@@ -27,6 +27,8 @@ namespace platformer.animator
 				steering.target = phase_1;
 			if ( current_phase == 1 )
 				steering.target = phase_2;
+			if ( current_phase == 2 )
+				steering.target = phase_3;
 		}
 
 		protected override void _init_cache()
