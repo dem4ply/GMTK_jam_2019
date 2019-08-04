@@ -23,6 +23,7 @@ namespace platformer.motor.npc
 		public float gravity = -9.8f;
 
 		public float multiplier_velocity_wall_slice = 0.8f;
+		public int last_direction = 0;
 
 		[Header( "wall jump" )]
 		public Vector3 wall_jump_climp = new Vector3( 0, 14, 14 );
@@ -139,12 +140,26 @@ namespace platformer.motor.npc
 			_proccess_gravity( ref velocity_vector );
 			_process_jump( ref velocity_vector );
 
-			animator.direction = velocity_vector;
+			int new_dir = Math.Sign( velocity_vector.z );
+			if ( ( velocity_vector.z > 0.01 || velocity_vector.z < -0.01 )
+				&& new_dir != 0 && new_dir != last_direction )
+			{
+				animator.direction = velocity_vector;
+				last_direction = new_dir;
+			}
 			if ( is_walled )
+			{
 				if ( is_walled_left )
+				{
 					animator.direction = Vector3.back;
+					last_direction = -1;
+				}
 				else
+				{
 					animator.direction = Vector3.forward;
+					last_direction = 1;
+				}
+			}
 			ridgetbody.velocity = velocity_vector;
 		}
 
