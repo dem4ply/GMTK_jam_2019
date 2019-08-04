@@ -13,7 +13,7 @@ namespace platformer.animator
 		public Platformer_checkpoint current_checkpoint;
 		public Transform player;
 
-		public Scenary_time_behaviour curtains;
+		public Scenary_behaviour curtains;
 		public chibi.joystick.Joystick joystick;
 		public float time_to_close_curtains = 2f;
 		public float time_to_open_curtains = 2f;
@@ -35,7 +35,7 @@ namespace platformer.animator
 
 		protected IEnumerator _spawn()
 		{
-			curtains.move( 0 );
+			curtains.phase( 0 );
 			joystick.enabled = false;
 			debug.log( "spawn" );
 			joystick.reset();
@@ -44,7 +44,7 @@ namespace platformer.animator
 			reset_scenary();
 			yield return new WaitForSeconds( time_to_restore_scenary );
 
-			curtains.move( 1 );
+			curtains.phase( 1 );
 			yield return new WaitForSeconds( time_to_open_curtains );
 			joystick.enabled = true;
 		}
